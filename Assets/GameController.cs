@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int[] rowLevel = {8, 10, 12};
     [SerializeField] int[] colLevel = {6, 8, 10 };
 
+    [SerializeField] float[] timeLevel = { 200, 250, 300 };
     [SerializeField] float time = 200;
 
     private int remainingCouple;
@@ -74,6 +75,7 @@ public class GameController : MonoBehaviour
 
         row = rowLevel[PlayerPrefs.GetInt("level")-1];
         col = colLevel[PlayerPrefs.GetInt("level")-1];
+        time = timeLevel[PlayerPrefs.GetInt("level") - 1];
         remainingCouple = row * col;
         shuffeRemaining = 3;
         listId.Clear();
